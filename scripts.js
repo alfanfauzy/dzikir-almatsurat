@@ -39,7 +39,6 @@ function initSlider() {
 
     // Render single slide
     function renderSlide(index, direction = "right") {
-        console.log(index);
         const outClass =
             direction === "left" ? "slide-out-left" : "slide-out-right";
 
@@ -48,11 +47,15 @@ function initSlider() {
         setTimeout(() => {
             const item = dzikirData[index];
             contentEl.innerHTML = `
-      ${item.title ? `<h3 class="content-title">${item.title}</h3>` : ""}
-      <p class="arabic" dir="rtl" lang="ar">${item.arabic}</p>
-      <p class="latin">${item.latin}</p>
-      <p class="translation">${item.transalation}</p>
-    `;
+                ${
+                    item.title
+                        ? `<h3 class="content-title">${item.title}</h3>`
+                        : ""
+                }
+                <p class="arabic" dir="rtl" lang="ar">${item.arabic}</p>
+                <p class="latin">${item.latin}</p>
+                <p class="translation">${item.transalation}</p>
+                `;
 
             contentEl.classList.remove("slide-out-left", "slide-out-right");
 
@@ -61,9 +64,9 @@ function initSlider() {
 
             // ✅ Update Next button text or icon
             if (index === dzikirData.length - 1) {
-                nextBtn.innerHTML = `Finish <i data-lucide="check-circle"></i>`;
+                nextBtn.innerHTML = `Sebelumnya <i data-lucide="check-circle"></i>`;
             } else {
-                nextBtn.innerHTML = `Next <i data-lucide="circle-chevron-right"></i>`;
+                nextBtn.innerHTML = `Selanjutnya <i data-lucide="circle-chevron-right"></i>`;
             }
 
             lucide.createIcons();

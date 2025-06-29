@@ -250,8 +250,6 @@ margin: 0 auto;
     width: 100%;
 }
 
-
-
 .nav-btn {
   display: inline-flex;
   align-items: center;
@@ -295,7 +293,7 @@ margin: 0 auto;
 }
 
 .slider-content h3 {
-  font-size: 1.25rem;
+  font-size: 0.9rem;
   margin-bottom: 10px;
 }
 
