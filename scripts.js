@@ -49,7 +49,7 @@ function initSlider() {
             const item = dzikirData[index];
             contentEl.innerHTML = `
       ${item.title ? `<h3 class="content-title">${item.title}</h3>` : ""}
-      <p class="arabic">${item.arabic}</p>
+      <p class="arabic" dir="rtl" lang="ar">${item.arabic}</p>
       <p class="latin">${item.latin}</p>
       <p class="translation">${item.transalation}</p>
     `;
@@ -99,16 +99,6 @@ function initSlider() {
             initSlider();
         }, 600); // match transition duration
 
-        // Hide content with fade
-        // const content = document.querySelector(".content");
-        // content.classList.remove("visible");
-        // content.classList.add("hidden");
-
-        // // Show wrapper again
-        // const wrapper = document.querySelector(".wrapper");
-        // wrapper.classList.remove("hidden");
-
-        // Optional: reset scroll or UI
         window.scrollTo(0, 0);
     }
 

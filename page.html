@@ -3,47 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zikir Pagi Sore - Islamic Books Slider</title>
+    <title>Al Ma'tsurat - Zikir Pagi Sore</title>
+    <meta name="description" content="Zikir Pagi dan Sore berdasarkan Al-Ma'tsurat karya Hasan al-Banna. Baca, pahami, dan resapi dzikir harian secara interaktif.">
+    <link rel="icon" href="public/images/favicon.ico" />
+    <meta property="og:title" content="Zikir Pagi Sore - Al-Ma'tsurat" />
+    <meta property="og:description" content="Baca dzikir pagi dan sore karya Hasan al-Banna secara interaktif dan mudah." />
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <section class="container">
-        <div class="wrapper">
+    <main class="container">
+        <header class="wrapper">
             <div>
                 <h5 class="handlee text-base white-text">Hasan al-Banna</h5>
             </div>
             <section class="container-title">
-                <h3 class="edu-qld-font text-lg">Al-Ma'tsurat</h3>
+                <h1 class="edu-qld-font text-lg">Al-Ma'tsurat</h1>
                 <div class="nunito heading-xl">
-                    <h1 class="red-text ">Zikir</h1>
-                    <h1 class="orange-text ">Pagi</h1>
-                    <h1 class="green-text ">Sore</h1>
+                    <h2 class="red-text ">Zikir</h2>
+                    <h2 class="orange-text ">Pagi</h2>
+                    <h2 class="green-text ">Sore</h2>
                 </div>
             </section>
-            <section class="contianer-home-action">
-                <button class="btn-action handlee">
+            <section class="container-home-action">
+                <button class="btn-action handlee" aria-label="Mulai membaca dzikir">
                     Mulai
                     <i data-lucide="play"></i>
                 </button>
             </section>
-        </div>
-        <div class="content hidden">
-            <section class="slider">
-                <h1>Dzikir </h1>
+        </header>
+        <section class="content hidden" section>
+            <article class="slider" role="region" aria-label="Slider dzikir">
                 <div class="progress-container">
                     <div class="progress-bar" id="progressBar"></div>
                 </div>
                 <div class="slider-content">
                     <!-- Content will be rendered by JS -->
                 </div>
-                <div class="slider-footer">
-                    <button id="prevBtn" class="nav-btn hidden handlee"><i data-lucide="circle-chevron-left"></i> Prev</button>
-                    <button id="nextBtn" class="nav-btn handlee">Next <i data-lucide="circle-chevron-right"></i></button>
-                </div>
-            </section>
-        </div>
-    </section>
+                <footer class="slider-footer">
+                    <button id="prevBtn" class="nav-btn hidden handlee" aria-label="Sebelumnya"><i data-lucide="circle-chevron-left"></i> Prev</button>
+                    <button id="nextBtn" class="nav-btn handlee" aria-label="Selanjutnya atau Selesai">Next <i data-lucide="circle-chevron-right"></i></button>
+                </footer>
+            </article>
+        </section>
+    </main>
     <script src="scripts.js"></script>
 </body>
 </html>

@@ -14,6 +14,7 @@
   --orange-color: #F77022;
   --green-color: #059954;
   --blue-color: #4470BA;
+  --pink-color: #FB8B8C;
 
   --text-base: 1.5rem; /* 18px – 24px */
   --text-lg:   clamp(1.25rem, 2vw + 0.5rem, 1.75rem);   /* 20px – 28px */
@@ -166,7 +167,7 @@ body {
 
 }
 
-.contianer-home-action{
+.container-home-action{
     margin-top: 1rem;
 }
 
@@ -207,13 +208,12 @@ body {
   background-color: #eee;
   border-radius: 4px;
   overflow: hidden;
-  margin-bottom: 20px;
 }
 
 .progress-bar {
   height: 100%;
   width: 0%;
-  background-color: var(--orange-color); /* or any color you like */
+  background-color: var(--pink-color); /* or any color you like */
   transition: width 0.3s ease;
 }
 
@@ -233,14 +233,14 @@ body {
 }
 
 .content-title{
-  border: 2px solid #000;
-    display: inline;
+margin: 0 auto;
+    border: 2px solid #000;
+    width: fit-content;
     padding: 10px;
     border-radius: 40px;
-    background-color: #b0c4f2;
-    color: #000000;
+    background-color: var(--blue-color);
+    color: white;
     text-transform: uppercase;
-    font-weight: 600;
   box-shadow: 11px 11px 0px -2px rgba(8,6,6,0.69);
 }
 
