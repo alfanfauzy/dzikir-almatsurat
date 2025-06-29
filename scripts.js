@@ -64,7 +64,7 @@ function initSlider() {
 
             // ✅ Update Next button text or icon
             if (index === dzikirData.length - 1) {
-                nextBtn.innerHTML = `Sebelumnya <i data-lucide="check-circle"></i>`;
+                nextBtn.innerHTML = `Selesai <i data-lucide="check-circle"></i>`;
             } else {
                 nextBtn.innerHTML = `Selanjutnya <i data-lucide="circle-chevron-right"></i>`;
             }

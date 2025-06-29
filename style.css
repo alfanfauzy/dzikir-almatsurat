@@ -253,11 +253,11 @@ margin: 0 auto;
 .nav-btn {
   display: inline-flex;
   align-items: center;
-  background-color: var(--blue-color);
+  background-color: var(--orange-color);
   border: 2px solid #000;
   border-radius: 9999px; /* fully rounded */
   padding: 8px 16px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   cursor: pointer;
   gap: 10px;
   color: white;
@@ -304,8 +304,8 @@ margin: 0 auto;
 
 .slider-content p.arabic{
     font-family: 'lpmq';
-    line-height: 2;
-    font-size: 2rem;
+    line-height: 2.1;
+    font-size: 1.8rem;
 }
 
 .slider-content.slide-out-left {
