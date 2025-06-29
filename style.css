@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Handlee&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Shadows+Into+Light&display=swap');
+
+
+
+@font-face {
+  font-family: 'lpmq';
+  src: url('public/fonts/LPMQ\ IsepMisbah.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --red-color: #ed584a;
+  --orange-color: #F77022;
+  --green-color: #059954;
+  --blue-color: #4470BA;
+
+  --text-base: 1.5rem; /* 18px – 24px */
+  --text-lg:   clamp(1.25rem, 2vw + 0.5rem, 1.75rem);   /* 20px – 28px */
+  --text-xl:   clamp(1.5rem, 3vw + 0.5rem, 2.25rem);    /* 24px – 36px */
+  --text-2xl:  clamp(1.75rem, 4vw + 0.5rem, 2.75rem);   /* 28px – 44px */
+  --text-3xl:  clamp(2rem, 5vw + 0.5rem, 3.5rem);       /* 32px – 56px */
+  --text-4xl:  clamp(2.5rem, 6vw + 0.5rem, 4.25rem);    /* 40px – 68px */
+  --text-5xl:  clamp(4rem, 7vw + 0.5rem, 6rem);    /* 40px – 68px */
+
+  /* Line Heights */
+  --leading-tight: 1;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Handlee', 'Nunito', sans-serif;
+    background: linear-gradient(
+  1deg,
+  #a8e6cf 0%,    /* soft mint */
+  #dcedc8 40%,   /* pale green */
+  #b0c4f2 70%,   /* soft blue */
+  #4470ba 100%   /* bold blue */
+);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.handlee{
+    font-family: "Handlee", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nunito{
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.edu-qld-font{
+    font-family: "Edu QLD Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.red-text{
+    color: var(--red-color)
+}
+
+.green-text{
+    color: var(--green-color)
+}
+
+.orange-text{
+    color: var(--orange-color)
+}
+
+.blue-text{
+    color: var(--blue-color)
+}
+
+.white-text{
+    color: white
+}
+
+/* Base Text */
+.text-base {
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  line-height: var(--leading-normal);
+  font-family: var(--font-sans);
+}
+
+.text-lg {
+  font-size: var(--text-xl);
+  font-weight: var(--font-regular);
+  line-height: var(--leading-normal);
+  font-family: var(--font-sans);
+}
+
+/* Headings */
+.heading-xl {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  font-family: var(--font-heading);
+}
+
+.heading-3xl {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  font-family: var(--font-heading);
+}
+
+.heading-2xl {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-tight);
+  font-family: var(--font-sans);
+}
+
+.heading-xl-alt {
+  font-size: var(--text-xl);
+  font-weight: var(--font-medium);
+  line-height: var(--leading-tight);
+  font-family: var(--font-sans);
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.6s ease;
+}
+
+.container{
+    text-align: center;
+}
+
+.container-title{
+    text-align: center;
+    padding: 20px 80px;
+    background: white;
+    border: 3px solid black;
+    border-radius: 50px 0 50px 0;
+  box-shadow: 11px 11px 0px -2px rgba(8,6,6,0.69);
+
+}
+
+.contianer-home-action{
+    margin-top: 1rem;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--orange-color);
+  border: 2px solid #000;
+  border-radius: 9999px; /* fully rounded */
+  padding: 8px 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  gap: 10px;
+  color: white;
+  box-shadow: 11px 11px 0px -2px rgba(8,6,6,0.69);
+  transition: all 0.2s ease;
+}
+
+.btn-action:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 13px 13px 0px -2px rgba(8, 6, 6, 0.69);
+  background-color: #f9560a; /* slightly deeper orange */
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: var(--orange-color); /* or any color you like */
+  transition: width 0.3s ease;
+}
+
+.content {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.content.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.content.visible {
+  display: block;
+  opacity: 1;
+}
+
+.content-title{
+  border: 2px solid #000;
+    display: inline;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #b0c4f2;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 600;
+  box-shadow: 11px 11px 0px -2px rgba(8,6,6,0.69);
+}
+
+.slider-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--blue-color);
+  border: 2px solid #000;
+  border-radius: 9999px; /* fully rounded */
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  gap: 10px;
+  color: white;
+  box-shadow: 11px 11px 0px -2px rgba(8,6,6,0.69);
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 13px 13px 0px -2px rgba(8, 6, 6, 0.69);
+  background-color: #f9560a; /* slightly deeper orange */
+}
+
+.hidden {
+  display: none;
+}
+
+.slider-content {
+  max-width: 800px;
+  border: 2px solid #000;
+  background: #dcedc8;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 8px 8px 0px -2px rgba(8, 6, 6, 0.69);
+  text-align: center;
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slider-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.slider-content p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.slider-content p.arabic{
+    font-family: 'lpmq';
+    line-height: 2;
+    font-size: 2rem;
+}
+
+.slider-content.slide-out-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.slider-content.slide-out-right {
+  opacity: 0;
+  transform: translateX(40px);
+}

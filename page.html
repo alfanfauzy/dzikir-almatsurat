@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zikir Pagi Sore - Islamic Books Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <section class="container">
+        <div class="wrapper">
+            <div>
+                <h5 class="handlee text-base white-text">Hasan al-Banna</h5>
+            </div>
+            <section class="container-title">
+                <h3 class="edu-qld-font text-lg">Al-Ma'tsurat</h3>
+                <div class="nunito heading-xl">
+                    <h1 class="red-text ">Zikir</h1>
+                    <h1 class="orange-text ">Pagi</h1>
+                    <h1 class="green-text ">Sore</h1>
+                </div>
+            </section>
+            <section class="contianer-home-action">
+                <button class="btn-action handlee">
+                    Mulai
+                    <i data-lucide="play"></i>
+                </button>
+            </section>
+        </div>
+        <div class="content hidden">
+            <section class="slider">
+                <h1>Dzikir </h1>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div class="slider-content">
+                    <!-- Content will be rendered by JS -->
+                </div>
+                <div class="slider-footer">
+                    <button id="prevBtn" class="nav-btn hidden handlee"><i data-lucide="circle-chevron-left"></i> Prev</button>
+                    <button id="nextBtn" class="nav-btn handlee">Next <i data-lucide="circle-chevron-right"></i></button>
+                </div>
+            </section>
+        </div>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+</html>
