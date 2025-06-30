@@ -1,28 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Handlee&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Shadows+Into+Light&display=swap');
-
-
+@font-face {
+  font-family: "lpmq";
+  src: url("public/fonts/LPMQ\ IsepMisbah.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
-  font-family: 'lpmq';
-  src: url('public/fonts/LPMQ\ IsepMisbah.ttf') format('truetype');
+  font-family: "Handlee";
+  src: url("public/fonts/Handlee.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("public/fonts/Nunito.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Edu QLD Hand";
+  src: url("public/fonts/EduQLDHand.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 :root {
   --red-color: #ed584a;
-  --orange-color: #F77022;
+  --orange-color: #f77022;
   --green-color: #059954;
-  --blue-color: #4470BA;
-  --pink-color: #FB8B8C;
+  --blue-color: #4470ba;
+  --pink-color: #fb8b8c;
 
   --text-base: 1.5rem; /* 18px – 24px */
-  --text-lg:   clamp(1.25rem, 2vw + 0.5rem, 1.75rem);   /* 20px – 28px */
-  --text-xl:   clamp(1.5rem, 3vw + 0.5rem, 2.25rem);    /* 24px – 36px */
-  --text-2xl:  clamp(1.75rem, 4vw + 0.5rem, 2.75rem);   /* 28px – 44px */
-  --text-3xl:  clamp(2rem, 5vw + 0.5rem, 3.5rem);       /* 32px – 56px */
-  --text-4xl:  clamp(2.5rem, 6vw + 0.5rem, 4.25rem);    /* 40px – 68px */
-  --text-5xl:  clamp(4rem, 7vw + 0.5rem, 6rem);    /* 40px – 68px */
+  --text-lg: clamp(1.25rem, 2vw + 0.5rem, 1.75rem); /* 20px – 28px */
+  --text-xl: clamp(1.5rem, 3vw + 0.5rem, 2.25rem); /* 24px – 36px */
+  --text-2xl: clamp(1.75rem, 4vw + 0.5rem, 2.75rem); /* 28px – 44px */
+  --text-3xl: clamp(2rem, 5vw + 0.5rem, 3.5rem); /* 32px – 56px */
+  --text-4xl: clamp(2.5rem, 6vw + 0.5rem, 4.25rem); /* 40px – 68px */
+  --text-5xl: clamp(4rem, 7vw + 0.5rem, 6rem); /* 40px – 68px */
 
   /* Line Heights */
   --leading-tight: 1;
@@ -38,63 +53,63 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Handlee', 'Nunito', sans-serif;
-    background: linear-gradient(
-  1deg,
-  #a8e6cf 0%,    /* soft mint */
-  #dcedc8 40%,   /* pale green */
-  #b0c4f2 70%,   /* soft blue */
-  #4470ba 100%   /* bold blue */
-);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+  font-family: "Handlee", "Nunito", sans-serif;
+  background: linear-gradient(
+    1deg,
+    #a8e6cf 0%,
+    /* soft mint */ #dcedc8 40%,
+    /* pale green */ #b0c4f2 70%,
+    /* soft blue */ #4470ba 100% /* bold blue */
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-.handlee{
-    font-family: "Handlee", cursive;
-    font-weight: 400;
-    font-style: normal;
+.handlee {
+  font-family: "Handlee", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.nunito{
-    font-family: "Nunito", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+.nunito {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.edu-qld-font{
-    font-family: "Edu QLD Hand", cursive;
-    font-weight: 400;
-    font-style: normal;
+.edu-qld-font {
+  font-family: "Edu QLD Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.red-text{
-    color: var(--red-color)
+.red-text {
+  color: var(--red-color);
 }
 
-.green-text{
-    color: var(--green-color)
+.green-text {
+  color: var(--green-color);
 }
 
-.orange-text{
-    color: var(--orange-color)
+.orange-text {
+  color: var(--orange-color);
 }
 
-.blue-text{
-    color: var(--blue-color)
+.blue-text {
+  color: var(--blue-color);
 }
 
-.white-text{
-    color: white
+.white-text {
+  color: white;
 }
 
 /* Base Text */
@@ -153,22 +168,21 @@ body {
   transition: opacity 0.6s ease;
 }
 
-.container{
-    text-align: center;
+.container {
+  text-align: center;
 }
 
-.container-title{
-    text-align: center;
-    padding: 20px 80px;
-    background: white;
-    border: 3px solid black;
-    border-radius: 50px 0 50px 0;
-  box-shadow: 11px 11px 0px -2px rgba(8,6,6,0.69);
-
+.container-title {
+  text-align: center;
+  padding: 20px 80px;
+  background: white;
+  border: 3px solid black;
+  border-radius: 50px 0 50px 0;
+  box-shadow: 11px 11px 0px -2px rgba(8, 6, 6, 0.69);
 }
 
-.container-home-action{
-    margin-top: 1rem;
+.container-home-action {
+  margin-top: 1rem;
 }
 
 .btn-action {
@@ -182,7 +196,7 @@ body {
   cursor: pointer;
   gap: 10px;
   color: white;
-  box-shadow: 11px 11px 0px -2px rgba(8,6,6,0.69);
+  box-shadow: 11px 11px 0px -2px rgba(8, 6, 6, 0.69);
   transition: all 0.2s ease;
 }
 
@@ -232,22 +246,22 @@ body {
   opacity: 1;
 }
 
-.content-title{
-margin: 0 auto;
-    border: 2px solid #000;
-    width: fit-content;
-    padding: 10px;
-    border-radius: 40px;
-    background-color: var(--blue-color);
-    color: white;
-    text-transform: uppercase;
-  box-shadow: 11px 11px 0px -2px rgba(8,6,6,0.69);
+.content-title {
+  margin: 0 auto;
+  border: 2px solid #000;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: var(--blue-color);
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 11px 11px 0px -2px rgba(8, 6, 6, 0.69);
 }
 
-.slider-footer{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.slider-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .nav-btn {
@@ -261,7 +275,7 @@ margin: 0 auto;
   cursor: pointer;
   gap: 10px;
   color: white;
-  box-shadow: 11px 11px 0px -2px rgba(8,6,6,0.69);
+  box-shadow: 11px 11px 0px -2px rgba(8, 6, 6, 0.69);
   transition: all 0.2s ease;
 }
 
@@ -302,10 +316,10 @@ margin: 0 auto;
   line-height: 1.6;
 }
 
-.slider-content p.arabic{
-    font-family: 'lpmq';
-    line-height: 2.1;
-    font-size: 1.8rem;
+.slider-content p.arabic {
+  font-family: "lpmq";
+  line-height: 2.1;
+  font-size: 1.8rem;
 }
 
 .slider-content.slide-out-left {

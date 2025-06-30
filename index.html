@@ -1,52 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Al Ma'tsurat - Zikir Pagi Sore</title>
-    <meta name="description" content="Zikir Pagi dan Sore berdasarkan Al-Ma'tsurat karya Hasan al-Banna. Baca, pahami, dan resapi dzikir harian secara interaktif.">
+    <meta
+      name="description"
+      content="Zikir Pagi dan Sore berdasarkan Al-Ma'tsurat karya Hasan al-Banna. Baca, pahami, dan resapi dzikir harian secara interaktif."
+    />
     <link rel="icon" href="public/images/favicon.ico" />
     <meta property="og:title" content="Zikir Pagi Sore - Al-Ma'tsurat" />
-    <meta property="og:description" content="Baca dzikir pagi dan sore karya Hasan al-Banna secara interaktif dan mudah." />
-    <link rel="stylesheet" href="style.css">
+    <meta
+      property="og:description"
+      content="Baca dzikir pagi dan sore karya Hasan al-Banna secara interaktif dan mudah."
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/public/images/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/public/images/favicon.svg" />
+    <link rel="shortcut icon" href="/public/images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/images/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Dzikir Al Ma'tsurat" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#ed584a" />
+  </head>
+  <body>
     <main class="container">
-        <header class="wrapper">
-            <div>
-                <h5 class="handlee text-base white-text">Hasan al-Banna</h5>
-            </div>
-            <section class="container-title">
-                <h1 class="edu-qld-font text-lg">Al-Ma'tsurat</h1>
-                <div class="nunito heading-xl">
-                    <h2 class="red-text ">Zikir</h2>
-                    <h2 class="orange-text ">Pagi</h2>
-                    <h2 class="green-text ">Sore</h2>
-                </div>
-            </section>
-            <section class="container-home-action">
-                <button class="btn-action handlee" aria-label="Mulai membaca dzikir">
-                    Mulai
-                    <i data-lucide="play"></i>
-                </button>
-            </section>
-        </header>
-        <section class="content hidden" section>
-            <article class="slider" role="region" aria-label="Slider dzikir">
-                <div class="progress-container">
-                    <div class="progress-bar" id="progressBar"></div>
-                </div>
-                <div class="slider-content">
-                    <!-- Content will be rendered by JS -->
-                </div>
-                <footer class="slider-footer">
-                    <button id="prevBtn" class="nav-btn hidden handlee" aria-label="Sebelumnya"><i data-lucide="circle-chevron-left"></i> Sebelumnya</button>
-                    <button id="nextBtn" class="nav-btn handlee" aria-label="Selanjutnya atau Selesai">Selanjutnya <i data-lucide="circle-chevron-right"></i></button>
-                </footer>
-            </article>
+      <button class="btn-install hidden handlee">Install App</button>
+      <header class="wrapper">
+        <div>
+          <h5 class="handlee text-base white-text">Hasan al-Banna</h5>
+        </div>
+        <section class="container-title">
+          <h1 class="edu-qld-font text-lg">Al-Ma'tsurat</h1>
+          <div class="nunito heading-xl">
+            <h2 class="red-text">Zikir</h2>
+            <h2 class="orange-text">Pagi</h2>
+            <h2 class="green-text">Sore</h2>
+          </div>
         </section>
+        <section class="container-home-action">
+          <button class="btn-action handlee" aria-label="Mulai membaca dzikir">
+            Mulai
+            <i data-lucide="play"></i>
+          </button>
+        </section>
+      </header>
+      <section class="content hidden" section>
+        <article class="slider" role="region" aria-label="Slider dzikir">
+          <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <div class="slider-content">
+            <!-- Content will be rendered by JS -->
+          </div>
+          <footer class="slider-footer">
+            <button
+              id="prevBtn"
+              class="nav-btn hidden handlee"
+              aria-label="Sebelumnya"
+            >
+              <i data-lucide="circle-chevron-left"></i> Sebelumnya
+            </button>
+            <button
+              id="nextBtn"
+              class="nav-btn handlee"
+              aria-label="Selanjutnya atau Selesai"
+            >
+              Selanjutnya <i data-lucide="circle-chevron-right"></i>
+            </button>
+          </footer>
+        </article>
+      </section>
     </main>
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>
