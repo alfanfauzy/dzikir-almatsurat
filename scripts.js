@@ -84,8 +84,6 @@ function initSlider() {
             dzikirList.splice(8, 4, ...dzikirSore);
         }
 
-        console.log(dzikirList);
-
         setTimeout(() => {
             const item = dzikirList[index];
             contentEl.innerHTML = `
@@ -180,6 +178,19 @@ function initSlider() {
         if (e.key === "ArrowLeft") prevBtn.click();
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const now = new Date();
+    const getYear = now.getFullYear();
+
+    const footerInfo = document.querySelector(".footer-information");
+
+    // Set text
+    footerInfo.innerHTML = `Created by <a href="https://alfan.web.id/" target="_blank" rel="noopener noreferrer">Alfan Fauzy</a> - All Right Reserved - @${getYear}`;
+
+    // Or use innerHTML if you want to include HTML formatting
+    // footerInfo.innerHTML = "<strong>Zikir Pagi dan Sore</strong> - Disusun oleh Hasan al-Banna";
+});
 
 let deferredPrompt;
 
