@@ -1,5 +1,36 @@
 lucide.createIcons();
 
+const dzikirSore = [
+    {
+        title: "#1: Dzikir",
+        count: 3,
+        arabic: "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلّٰهِ،, وَالْحَمْدُ لِلّٰهِ لَا شَرِيْكَ لَهُ , لَا إِلَهَ إِلَّا هُوَ وَإِلَيْهِ النُّشُوْرُ",
+        transalation:
+            "Aku berlindung kepada Allah Yang Maha Mendengar lagi Maha Mengetahui dari godaan setan yang terkutuk.",
+    },
+    {
+        title: "#2: Dzikir",
+        count: 3,
+        arabic: "أَمْسَيْنَا عَلَى فِطْرَةِ الْإِسْلَامِ، وَكَلِمَةِ الْإِخْلَاصِ، وَعَلَى دِيْنِ نَبِيِّنَا مُحَمَّدٍ ﷺ وَعَلَى مِلَّةِ أَبِيْنَا إِبْرَاهِيْمَ حَنِيْفًا وَمَا كَانَ مِنَ الْمُشْرِكِيْنَ",
+        transalation:
+            "Aku berlindung kepada Allah Yang Maha Mendengar lagi Maha Mengetahui dari godaan setan yang terkutuk.",
+    },
+    {
+        title: "#3: Dzikir",
+        count: 3,
+        arabic: "اللّٰهُـمَّ إِنِّيْ أَمْسَيتُ مِنْكَ فِيْ نِعْمَةٍ وَعَافِيَةٍ وَسِتْرٍ, فَأَتِمَّ عَلَيَّ نِعْمَتَكَ وَعَافِيَتَكَ وَسِتْرَكَ فِيْ الدِّيْنِ وَالدُّنْيَا وَالْأَخِرَةِ",
+        transalation:
+            "Aku berlindung kepada Allah Yang Maha Mendengar lagi Maha Mengetahui dari godaan setan yang terkutuk.",
+    },
+    {
+        title: "#4: Dzikir",
+        count: 3,
+        arabic: "اَللّٰهُـمَّ مَا أَمْسَ بِيْ مِنْ نِعْمَةٍ , أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ , لَا شَرِيْكَ لَكَ , فَلَكَ الْحَمْدُ , وَلَكَ الشُّكْرُ",
+        transalation:
+            "Aku berlindung kepada Allah Yang Maha Mendengar lagi Maha Mengetahui dari godaan setan yang terkutuk.",
+    },
+];
+
 document.querySelector(".btn-action").addEventListener("click", () => {
     const wrapper = document.querySelector(".wrapper");
     const content = document.querySelector(".content");
@@ -22,6 +53,9 @@ function initSlider() {
     const nextBtn = document.getElementById("nextBtn");
     const prevBtn = document.getElementById("prevBtn");
 
+    const now = new Date();
+    const isMorning = now.getHours() < 15;
+
     let dzikirData = [];
     let currentIndex = 0;
 
@@ -39,13 +73,21 @@ function initSlider() {
 
     // Render single slide
     function renderSlide(index, direction = "right") {
+        const dzikirList = [...dzikirData];
+
         const outClass =
             direction === "left" ? "slide-out-left" : "slide-out-right";
 
         contentEl.classList.add(outClass);
 
+        if (!isMorning) {
+            dzikirList.splice(8, 4, ...dzikirSore);
+        }
+
+        console.log(dzikirList);
+
         setTimeout(() => {
-            const item = dzikirData[index];
+            const item = dzikirList[index];
             contentEl.innerHTML = `
                 <div class="container-content-title">
                     ${
@@ -53,7 +95,11 @@ function initSlider() {
                             ? `<h3 class="content-title">${item.title}</h3>`
                             : ""
                     }
-                    ${item.count ? `<span class="content-count">${item.count}X</span>` : ""}
+                    ${
+                        item.count
+                            ? `<span class="content-count">${item.count}X</span>`
+                            : ""
+                    }
                 </div>
                 <p class="arabic" dir="rtl" lang="ar">${item.arabic}</p>
             `;
@@ -123,6 +169,10 @@ function initSlider() {
             renderSlide(currentIndex, "left");
         }
     });
+
+    // Handle Dzikir Title
+    const dzikirTitleEl = document.querySelector(".dzikir-title");
+    dzikirTitleEl.textContent = isMorning ? "Dzikir Pagi" : "Dzikir Sore";
 
     // Keyboard navigation
     document.addEventListener("keydown", (e) => {
