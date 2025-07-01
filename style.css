@@ -172,6 +172,33 @@ body {
   text-align: center;
 }
 
+.wrapper-instruction-install{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    padding: 7px 14px;
+    border-radius: 10px 10px 0px 0px;
+  box-shadow: 11px 11px 0px -2px rgba(8, 6, 6, 0.69);
+  margin-bottom: 10px;
+background-color: #dcedc8;
+align-items: center;
+}
+
+.btn-install{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    padding: 6px;
+    border-radius: 40px;
+    background-color: #dcedc8;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+    background-color: var(--orange-color);
+    color: white;
+}
+
 .container-title {
   text-align: center;
   padding: 20px 80px;
@@ -279,6 +306,13 @@ body {
   color: white;
   box-shadow: 11px 11px 0px -2px rgba(8, 6, 6, 0.69);
   transition: all 0.2s ease;
+}
+
+.loading {
+  font-family: sans-serif;
+  color: #888;
+  text-align: center;
+  padding: 1rem;
 }
 
 .slider-footer {
