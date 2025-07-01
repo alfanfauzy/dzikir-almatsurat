@@ -17,7 +17,6 @@ Built for focus, speed, and a clean user experience — with PWA support so you 
 -   ⚡ **Fast, minimal, and mobile-first UI**
 -   🚫 **Ad-free experience**
 
----
 
 ## 💻 Tech Stack
 
@@ -27,4 +26,20 @@ Built for focus, speed, and a clean user experience — with PWA support so you 
 -   `JSON` – used for dynamic dzikir content
 -   `Mobile-first` responsive layout
 
----
+
+## 🧠 Motivation
+I built this because most dzikir apps are either too heavy, full of ads, or have poor UX.
+This project aims to provide a better experience: minimal, responsive, and spiritually focused ✨
+
+
+## 🙌 Contributing
+Contributions are welcome!
+If you want to help improve the UI/UX, translations, or add features, feel free to open a pull request.
+
+
+## 📄 License
+This project is licensed under the MIT License.
+
+
+## 🤲 Support
+If you find this app useful or spiritually beneficial, feel free to share it with others or give the repo a ⭐
