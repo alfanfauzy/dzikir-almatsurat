@@ -206,16 +206,45 @@ document.querySelector(".btn-install")?.addEventListener("click", async () => {
     }
 });
 
-// Service Worker
+function showUpdateBanner() {
+    const banner = document.createElement("div");
+    banner.innerText = "🔄 Versi baru tersedia. Klik untuk muat ulang!";
+    banner.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: #1a1a1a;
+        color: #fff;
+        padding: 10px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        z-index: 9999;
+        font-family: sans-serif;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    `;
+    banner.onclick = () => window.location.reload();
+    document.body.appendChild(banner);
+}
+
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
-        navigator.serviceWorker
-            .register("/sw.js")
-            .then((reg) =>
-                console.log("✅ Service worker registered", reg.scope)
-            )
-            .catch((err) =>
-                console.error("❌ Service worker registration failed:", err)
-            );
+        navigator.serviceWorker.register("/sw.js").then((registration) => {
+            console.log("✅ Service worker registered", registration.scope);
+
+            // Detect new updates
+            registration.onupdatefound = () => {
+                const newWorker = registration.installing;
+                newWorker.onstatechange = () => {
+                    if (newWorker.state === "installed") {
+                        if (navigator.serviceWorker.controller) {
+                            // ✅ New content available
+                            showUpdateBanner(); // show prompt to reload
+                        } else {
+                            console.log("🎉 Content cached for offline use");
+                        }
+                    }
+                };
+            };
+        });
     });
 }
