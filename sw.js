@@ -1,4 +1,4 @@
-const CACHE_NAME = "zikir-app-v2";
+const CACHE_NAME = "zikir-app-v3";
 const ASSETS_TO_CACHE = [
   "index.html",
   "style.css",
